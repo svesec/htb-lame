@@ -147,7 +147,7 @@ Figure 7 – Interactive shell / proof of shell access (root user shown later).
 **Observation:** The chosen Samba exploit yields direct command execution as a privileged user (in this case resulting in root). No additional local privilege escalation was necessary.
 
 ### Verification of privileges
-Commands and masked outputs (professional masking applied):
+Commands and masked outputs:
 
     whoami
     # ➜ root
@@ -161,7 +161,7 @@ Commands and masked outputs (professional masking applied):
     uname -a
     # ➜ Linux lame 2.6.24-16-server ... i686 GNU/Linux
 
-Figure 8 – Example of verified root shell / proof.  
+Figure 8 – User flag evidence (masked). 
 ![Figure 8 – Root shell / verification output](images/fig8_user_flag.png)
 
 ---
