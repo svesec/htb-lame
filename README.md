@@ -57,10 +57,10 @@ Result (not exhaustive — relevant ports shown):
 - Samba smbd `3.0.20` on 139/445 is the highest-priority attack surface.
 
 Figure 1 – Nmap initial scan (sudo nmap -sC -sV).  
-![Figure 1 – Nmap initial scan (sudo nmap -sC -sV)](fig1_nmap.png)
+![Figure 1 – Nmap initial scan (sudo nmap -sC -sV)](images/fig1_nmap.png)
 
 Figure 2 – FTP anonymous listing (no useful files).  
-![Figure 2 – FTP anonymous listing](fig2_ftp_listing.png)
+![Figure 2 – FTP anonymous listing](images/fig2_ftp_listing.png)
 
 ### SMB / Samba findings
 - NetBIOS name: `lame`  
@@ -69,10 +69,10 @@ Figure 2 – FTP anonymous listing (no useful files).
 - Samba 3.0.20 has public exploits/modules; focus shifted to Samba RCE vectors.
 
 Figure 3 – SMB version and shares evidence (part 1).  
-![Figure 3 – SMB version output part 1](fig3_smb_version_part1.png)
+![Figure 3 – SMB version output part 1](images/fig3_smb_version_part1.png)
 
 Figure 3b – SMB shares / additional output (part 2).  
-![Figure 3b – SMB shares output part 2](fig3_smb_shares_part2.png)
+![Figure 3b – SMB shares output part 2](images/fig3_smb_shares_part2.png)
 
 ---
 
@@ -85,7 +85,7 @@ Start Metasploit and search:
     search samba
 
 Figure 4 – Metasploit search results for Samba modules.  
-![Figure 4 – Metasploit search for samba modules](fig4_msf_search.png)
+![Figure 4 – Metasploit search for samba modules](images/fig4_msf_search.png)
 
 **Chosen module:** `exploit/multi/samba/usermap_script`  
 - Disclosure Date: 2007-05-14  
@@ -100,7 +100,7 @@ Commands used (example):
     show options
 
 Figure 5 – Module options / show options.  
-![Figure 5 – Module options and required settings](fig5_msf_options.png)
+![Figure 5 – Module options and required settings](images/fig5_msf_options.png)
 
 Key options to set:
 - `RHOSTS = <target_IP>`
@@ -119,7 +119,7 @@ Example config (replace placeholders):
     exploit
 
 Figure 6 – Exploit execution (handler started, exploit sent).  
-![Figure 6 – Exploit run and handler started](fig6_exploit_run.png)
+![Figure 6 – Exploit run and handler started](images/fig6_exploit_run.png)
 
 Expected output on success:
 
@@ -138,7 +138,7 @@ Typical stabilization steps:
     export TERM=xterm
 
 Figure 7 – Interactive shell / proof of shell access (root user shown later).  
-![Figure 7 – Root / interactive shell screenshot](fig7_root_shell.png)
+![Figure 7 – Root / interactive shell screenshot](images/fig7_root_shell.png)
 
 ---
 
@@ -162,7 +162,7 @@ Commands and masked outputs (professional masking applied):
     # ➜ Linux lame 2.6.24-16-server ... i686 GNU/Linux
 
 Figure 8 – Example of verified root shell / proof.  
-![Figure 8 – Root shell / verification output](fig8_user_flag.png)
+![Figure 8 – Root shell / verification output](images/fig8_user_flag.png)
 
 ---
 
@@ -177,7 +177,7 @@ Figure 8 – Example of verified root shell / proof.
     # ➜ 07d078... (masked)
 
 Figure 9 – User flag evidence (masked).  
-![Figure 9 – User flag (masked)](fig9_root_flag.png)
+![Figure 9 – User flag (masked)](images/fig9_root_flag.png)
 
 **Locate root flag**
 
