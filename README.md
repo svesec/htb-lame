@@ -161,8 +161,8 @@ Commands and masked outputs:
     uname -a
     # ➜ Linux lame 2.6.24-16-server ... i686 GNU/Linux
 
-Figure 8 – User flag evidence (masked). 
-![Figure 8 – Root shell / verification output](images/fig8_user_flag.png)
+Figure 8 – User flag evidence (masked).  
+![Figure 8 – User flag (masked)](images/fig8_user_flag.png)
 
 ---
 
@@ -176,8 +176,8 @@ Figure 8 – User flag evidence (masked).
     cat /home/makis/user.txt
     # ➜ 07d078... (masked)
 
-Figure 9 – User flag evidence (masked).  
-![Figure 9 – User flag (masked)](images/fig9_root_flag.png)
+Figure 9 – Root flag evidence (masked).  
+![Figure 9 – Root flag (masked)](images/fig9_root_flag.png)
 
 **Locate root flag**
 
